@@ -1,4 +1,8 @@
-# git-crypt action - transparent file encryption for GitHub Actions
+# gh-actions-git-crypt-action
+
+A fork of [amplium/git-crypt-action](https://github.com/amplium/git-crypt-action/) with some enhancements as follows:
+- Run `git stash` before locking the repository in `post.sh`.
+- Add `-a` argument to `git lock` in `post.sh` to lock all keys.
 
 `git-crypt-action` speeds up and simplifies using [`git-crypt`](https://github.com/AGWA/git-crypt) inside your GitHub
 Action workflows by downloading a pre-built docker image and unlocking your
@@ -20,8 +24,8 @@ jobs:
   some_job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: amplium/git-crypt-action@master
+      - uses: actions/checkout@v4
+      - uses: c0x12c/gh-actions-git-crypt-action@v0.1.0
         with:
           key_encoded: ${{ secrets.KEY }}
 ```
