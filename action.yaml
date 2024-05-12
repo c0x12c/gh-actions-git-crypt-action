@@ -1,7 +1,7 @@
 ---
-name: Unlock Git-Crypt secrets
-description: Unlock git-crypt files with a minimal alpine based Docker image
-author: Amplium
+name: Enhanced unlock Git-Crypt secrets
+description: A fork of amplium/git-crypt-action with additional features
+author: c0x12c
 
 branding:
   icon: unlock
